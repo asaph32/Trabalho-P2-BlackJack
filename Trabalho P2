@@ -1,0 +1,107 @@
+package Trabalho;
+
+public class BlackJack21 {
+    public String jogador1;
+    public String jogador2;
+    public int carta1;
+    public int carta2;
+    public int carta3;
+    public int carta4;
+    public int total;
+    public int total1jogador;
+    public int total2jogador;
+
+    public int gettotal1jogador() {
+        return this.total1jogador;
+    }
+    public void settotal1jogador(int total1jogador) {
+        this.total1jogador=total1jogador;
+    }
+    public int gettotal2jogador() {
+        return this.total2jogador;
+    }
+    public void settotal2jogador(int total2jogador) {
+        this.total2jogador=total2jogador;
+    }
+    public int getTotal() {
+        return this.total;
+    }
+    public void setTotal(int total) {
+        this.total=total;
+    }
+
+    public int getcarta3() {
+        return this.carta3;
+    }
+    public void setcarta3(int carta3) {
+        this.carta3=carta3;
+    }
+    public int getcarta4() {
+        return this.carta4;
+    }
+    public void setcarta4(int carta4) {
+        this.carta4=carta4;
+    }
+    public String getjogador() {
+        return this.jogador1;
+    }
+    public void setjogador(String jogador1) {
+        this.jogador1=jogador1;
+    }
+    public String getjogador2() {
+        return this.jogador2;
+    }
+    public void setjogador2(String jogador2) {
+        this.jogador2=jogador2;
+    }
+    public int getcarta1() {
+        return this.carta1;
+    }
+    public void setcarta1(int carta1) {
+        this.carta1=carta1;
+    }
+    public int getcarta2() {
+        return this.carta2;
+    }
+    public void setcarta2(int carta2) {
+        this.carta2=carta2;
+    }
+    public void Vencedor() {
+        if(carta1+carta2 > carta3 + carta4) {
+            System.out.println("O vencedor foi : " + this.jogador1);
+        } else {
+            System.out.println("O vencedor foi : " + this.jogador2);
+        }
+    }
+    public void Derrota() {
+        if(carta1+carta2 < carta3+carta4) {
+            System.out.println("O perdedor foi : " + this.jogador1);
+        }
+        else {
+            System.out.println(" O perdedor foi : " + this.jogador2);
+        }
+    }
+    public void Empate() {
+        if(carta1+carta2==carta3+carta4) {
+            System.out.println("O JOGO NO FINAL DE TUDO ESTA EMPATADO!!");
+        }
+    }
+    public void SomaDasCartas() {
+        total=carta1+carta2+carta3+carta4;
+    }
+    public void Pontuacao1jogador() {
+        total1jogador=carta1+carta2;
+    }
+    public void Pontuacao2jogador() {
+        total2jogador=carta3+carta4;
+    }
+    public void statusDoJogo() {
+        System.out.println("Nome do 1 jogador : " + this.jogador1);
+        System.out.println("Nome do 2 jogador : " + this.jogador2);
+        System.out.println("Soma das cartas do jogo = " + this.total);
+        System.out.println("Pontuaçao do " + this.jogador1 + " na partida foi de :   " + total1jogador + " pontos ");
+        System.out.println("Pontuaçao do " + this.jogador2 + " na partida foi de :  " + total2jogador + " pontos ");
+        
+    }
+    
+}
